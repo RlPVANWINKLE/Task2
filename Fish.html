@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+      }
+      @media screen and (min-width: 1000px){
+        .navItem{
+            color: #003B6D;
+            font-weight: 800;
+            margin-left: 3%;
+        }
+        .navItem:active{
+            text-decoration: underline;
+        }
+        .navbar{
+            padding: 2%;
+            display: block;
+            text-align: center;
+        }
+        .navItem:hover{
+            background-color: #003B6D;
+            color: #BDBDBD;
+            padding: 2%;
+            transition: 0.25s;
+        }
+        .mobileMenu{
+            display:none
+        }
+        .mobileNavbar{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 999px){
+        .navbar{
+            display: none;
+        }
+        .mobileNavbar{
+            height: 0;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            text-align: center;
+            background-color: #6699CC;
+            overflow: hidden;
+            transition: 1.0s;
+            
+        }
+        .navItem{
+            display: block;
+            padding: 3%;
+            text-decoration: underline;
+            font-weight: 800;
+            color:#003B6D;
+        }
+        .navItem:hover{
+            background-color: #003B6D;
+            color: #BDBDBD;
+            padding: 4%;
+        }
+        .mobileMenu{
+            background-color: #003B6D;
+            padding: 2%;
+            display:flex;
+            justify-content: space-between;
+        }
+        .search{
+            background-color: white;
+            padding: 1% 9% 1% 1%;
+            margin: auto;
+            margin-right: 1%;
+        }
+        .logo{
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+        }
+    }
+    .center{
+        text-align: center;
+    }
+    .text12{
+        font-size: 12px;
+    }
+    .text18{
+        font-size: 18px;
+    }
+    .text20{
+        font-size: 20px;
+    }
+    .text24{
+        font-size: 24px;
+    }
+    .text30{
+        font-size: 30px;
+    }
+    .text36{
+        font-size: 36px;
+    }
+    @media screen and (max-width: 650px){
+        .navbar{
+            display: none;
+        }
+
+    }
+
+</style>
+<script>
+    function menu(){
+        let menu = document.getElementById("menu").style;
+        if(menu.height == "45%"){
+            menu.height = "0";
+            document.getElementById("main").style.opacity="1";
+            console.log("close");
+            
+        }
+        else{
+            menu.height="45%";
+            document.getElementById("main").style.opacity="0.75";
+            console.log("Open");
+        }
+    }
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/38521864dd.js" crossorigin="anonymous"></script>
+</head>
+<body>    
+    <div class="navbar bgPrimary2">        
+        <a href="/Index.html" class="navItem">Home</a>
+        <a href="/Cats.html" class="navItem">Cats</a>
+        <a href="/Dogs.html" class="navItem">Dogs</a>
+        <a href="/Fish.html" class="navItem">Fish</a>
+        <a href="/SmAnimals.html" class="navItem">Small-Animals</a>
+    </div>
+    <div class="mobileNavbar" id="menu" onclick="menu();">   
+        <img src="/images/Picture4.png" width="30%" class="logo">     
+        <a href="/Index.html" class="navItem">Home</a>
+        <a href="/Cats.html" class="navItem">Cats</a>
+        <a href="/Dogs.html" class="navItem">Dogs</a>
+        <a href="/Fish.html" class="navItem">Fish</a>
+        <a href="/SmAnimals.html" class="navItem">Small-Animals</a>
+    </div>
+    <div  class="mobileMenu" id="mobileMenu">
+        <i class="fas fa-bars fa-lg" onclick="menu();"></i>
+        <p class="search">Salt Water...</p>
+    </div>
+    <div class="main" id="main">
+        <div class="jumbotron">
+        </div>
+        <div class="center">
+        </div>
+        <div class=" center">
+            Fish
+        </div>
+    </div>
+    <div class="bottom">
+
+    </div>
+    
+</body>
+</html>
