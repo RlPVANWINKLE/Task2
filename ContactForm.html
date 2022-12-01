@@ -8,7 +8,7 @@
       }
       @media screen and (min-width: 1000px){
         .navItem{
-            color: #003B6D;
+            color: #BDBDBD;
             font-weight: 800;
             margin-left: 3%;
         }
@@ -21,9 +21,7 @@
             text-align: center;
         }
         .navItem:hover{
-            background-color: #003B6D;
-            color: #BDBDBD;
-            padding: 2%;
+            font-size: 20px;
             transition: 0.25s;
         }
         .mobileMenu{
@@ -31,6 +29,22 @@
         }
         .mobileNavbar{
             display: none;
+        }
+        .col-1{
+            width: 45%;
+        }
+        .col-2{
+            width: 45%;
+        }
+        label{
+            width: 125px;
+            display: inline-block;
+            text-align: left;
+        }
+        textarea{
+            margin: auto;
+            display: block;
+            width: 30%;
         }
     }
     @media screen and (max-width: 999px){
@@ -196,20 +210,20 @@
     <script src="https://kit.fontawesome.com/38521864dd.js" crossorigin="anonymous"></script>
 </head>
 <body>    
-    <div class="navbar bgPrimary2">        
-        <a href="/Index.html" class="navItem">Home</a>
-        <a href="/Cats.html" class="navItem">Cats</a>
-        <a href="/Dogs.html" class="navItem">Dogs</a>
-        <a href="/Fish.html" class="navItem">Fish</a>
-        <a href="/SmAnimals.html" class="navItem">Small-Animals</a>
+    <div class="navbar bgPrimary">        
+        <a href="Index.html" class="navItem">Home</a>
+        <a href="Cats.html" class="navItem">Cats</a>
+        <a href="Dogs.html" class="navItem">Dogs</a>
+        <a href="Fish.html" class="navItem">Fish</a>
+        <a href="SmAnimals.html" class="navItem">Small-Animals</a>
     </div>
     <div class="mobileNavbar" id="menu" onclick="menu();">   
-        <img src="/images/Picture4.png" width="30%" class="logo">     
-        <a href="/Index.html" class="navItem">Home</a>
-        <a href="/Cats.html" class="navItem">Cats</a>
-        <a href="/Dogs.html" class="navItem">Dogs</a>
-        <a href="/Fish.html" class="navItem">Fish</a>
-        <a href="/SmAnimals.html" class="navItem">Small-Animals</a>
+        <img src="images/Picture4.png" width="30%" class="logo">     
+        <a href="Index.html" class="navItem">Home</a>
+        <a href="Cats.html" class="navItem">Cats</a>
+        <a href="Dogs.html" class="navItem">Dogs</a>
+        <a href="Fish.html" class="navItem">Fish</a>
+        <a href="SmAnimals.html" class="navItem">Small-Animals</a>
     </div>
     <div  class="mobileMenu" id="mobileMenu">
         <i class="fas fa-bars fa-lg" onclick="menu();"></i>
@@ -258,7 +272,7 @@
         </div>
     </div>
     <div  class="bgPrimary center mt-5">
-        <img src="/images/Picture1.png" width="10%">
+        <img src="images/Picture1.png" width="10%">
     </div>
     
 </body>
